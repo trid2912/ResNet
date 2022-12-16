@@ -1,3 +1,4 @@
-OUTPUT_DIR: "logs/baseline"
+OUTPUT_DIR: "logs/deeplabv3_resnet50"
 DATASETS:
-  TRAIN_LIST: "pascal_voc/subset_train_aug/train_aug_labeled_1-8.txt"
+  TRAIN_LIST: "/home/kc/luantt/kaggle_data/dataset-medium/train.txt"
+  VALID_LIST: "/home/kc/luantt/kaggle_data/dataset-medium/valid.txt"

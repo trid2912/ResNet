@@ -45,19 +45,19 @@ def train(cfg, logger):
         os.mkdir(output_dir)
 
     iteration = 0
-    img_list = None
-    if cfg.DATASETS.TRAIN_LIST:
-        img_list = read_file(cfg.DATASETS.TRAIN_LIST)
 
-    train_data = VOCDataset(cfg.DATASETS.TRAIN_IMGDIR, cfg.DATASETS.TRAIN_LBLDIR,
-                            img_list=img_list,
+    train_list = read_file(cfg.DATASETS.TRAIN_LIST)
+    valid_list = read_file(cfg.DATASETS.LABEL_LIST)
+
+    train_data = VOCDataset(cfg.DATASETS.IMGDIR, cfg.DATASETS.LBLDIR,
+                            img_list=train_list,
                             transformation=Compose([
                             ToTensor(), 
                             Normalization(), 
                             RandomScale(cfg.INPUT.MULTI_SCALES), 
                             RandomCrop(cfg.INPUT.CROP_SIZE), 
                             RandomFlip(cfg.INPUT.FLIP_PROB)]))
-    val_data = VOCDataset(cfg.DATASETS.VAL_IMGDIR, cfg.DATASETS.VAL_LBLDIR, transformation=
+    val_data = VOCDataset(cfg.DATASETS.IMGDIR, cfg.DATASETS.LBLDIR,img_list = valid_list, transformation=
                          Compose([ToTensor(), Normalization(), RandomCrop(cfg.INPUT.CROP_SIZE)]))
 
     logger.info("Number of train images: " + str(len(train_data)))
@@ -155,9 +155,9 @@ def train(cfg, logger):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Pytorch training")
-    parser.add_argument("--config", default="")
-    args = parser.parse_args()
-    cfg = combine_cfg(args.config)
-    print(cfg.OUTPUT_DIR)
-    logger = setup_logger("Fully supervised", cfg.OUTPUT_DIR, str(datetime.now()) + ".log")
+    #parser.add_argument("--config", default="")
+    #args = parser.parse_args()
+    #cfg = combine_cfg(args.config)
+    #print(cfg.OUTPUT_DIR)
+    logger = setup_logger("DeeplabV3 ( ResNet) ", cfg.OUTPUT_DIR, str(datetime.now()) + ".log")
     model = train(cfg, logger)

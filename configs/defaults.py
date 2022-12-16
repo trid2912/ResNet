@@ -21,13 +21,10 @@ _C.INPUT.DSBN = 2
 _C.INPUT.SDA = 3
 
 _C.DATASETS = CN()
-_C.DATASETS.TRAIN_IMGDIR = "pascal_voc/train_aug/image"
-_C.DATASETS.TRAIN_LBLDIR = "pascal_voc/train_aug/label"
-_C.DATASETS.VAL_IMGDIR = "pascal_voc/val/image"
-_C.DATASETS.VAL_LBLDIR = "pascal_voc/val/label"
-_C.DATASETS.LABEL_LIST = "pascal_voc/subset_train_aug/train_aug_labeled_1-8.txt"
-_C.DATASETS.UNLABELLED_LIST = "pascal_voc/subset_train_aug/train_aug_unlabeled_1-8.txt"
-_C.DATASETS.TRAIN_LIST = ""
+_C.DATASETS.IMGDIR = "/home/kc/luantt/kaggle_data/dataset-medium/image-chips"
+_C.DATASETS.LBLDIR = "/home/kc/luantt/kaggle_data/dataset-medium/label-chips"
+_C.DATASETS.TRAIN_LIST: "/home/kc/luantt/kaggle_data/dataset-medium/train.txt"
+_C.DATASETS.VALID_LIST: "/home/kc/luantt/kaggle_data/dataset-medium/valid.txt"
 
 _C.SOLVER = CN()
 _C.SOLVER.MAX_ITER = 40000
@@ -41,4 +38,4 @@ _C.SOLVER.MOMENTUM = 0.9
 _C.SOLVER.WEIGHT_DECAY = 5e-4
 
 _C.SOLVER.BATCH_SIZE = 8 
-_C.SOLVER.STRONG_AUG = 2
+
