@@ -41,4 +41,4 @@ class DeeplabV3plus(nn.Module):
 
 if __name__ == "__main__":
     model = DeeplabV3plus()
-    print(model(torch.randn((2, 3, 300, 300))).size())
+    print(model(torch.randn((2, 3, 512, 512))).size())

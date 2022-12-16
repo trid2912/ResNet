@@ -113,8 +113,8 @@ def train(cfg, logger):
             if iteration % 1000 == 0:
                 logger.info("Validation mode")
                 model.eval()
-                intersections = torch.zeros(21).to(device)
-                unions = torch.zeros(21).to(device)
+                intersections = torch.zeros(cfg.MODEL.NUM_CLASSES).to(device)
+                unions = torch.zeros(cfg.MODEL.NUM_CLASSES).to(device)
                 rights = 0
                 totals = 0
                 for imgs, lbls in val_loader:
@@ -125,10 +125,10 @@ def train(cfg, logger):
                     with torch.no_grad():
                         preds = model(imgs)
                         preds = preds.argmax(dim=1)
-                        intersection, union = IoU(preds, lbls, 21)
+                        intersection, union = IoU(preds, lbls, cfg.MODEL.NUM_CLASSES)
                         intersections += intersection
                         unions += union
-                        right, total = OverallAcc(preds, lbls, 21)
+                        right, total = OverallAcc(preds, lbls, cfg.MODEL.NUM_CLASSES)
                         rights += right
                         totals += total
 
