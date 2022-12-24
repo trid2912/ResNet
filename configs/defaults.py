@@ -4,12 +4,12 @@ from yacs.config import CfgNode as CN
 
 _C = CN()
 
-_C.OUTPUT_DIR = "logs/train_fully"
+_C.OUTPUT_DIR = "logs/train_deeplabv3+"
 _C.MODEL = CN()
 _C.MODEL.NAME = "deeplabv3+_resnet50"
-_C.MODEL.NUM_CLASSES = 7
+_C.MODEL.NUM_CLASSES = 6
 _C.MODEL.ATROUS = [6, 12, 18]
-_C.MODEL.DEVICE = "cuda:0"
+_C.MODEL.DEVICE = "cuda:1"
 _C.MODEL.WEIGHTS = ""
 _C.MODEL.FREEZE_BN = False
 
@@ -23,12 +23,12 @@ _C.INPUT.SDA = 3
 _C.DATASETS = CN()
 _C.DATASETS.IMGDIR = "/home/kc/luantt/kaggle_data/dataset-medium/image-chips"
 _C.DATASETS.LBLDIR = "/home/kc/luantt/kaggle_data/dataset-medium/label-chips"
-_C.DATASETS.TRAIN_LIST: "/home/kc/luantt/kaggle_data/dataset-medium/train.txt"
-_C.DATASETS.VALID_LIST: "/home/kc/luantt/kaggle_data/dataset-medium/valid.txt"
+_C.DATASETS.TRAIN_LIST = "/home/kc/luantt/kaggle_data/dataset-medium/train.txt"
+_C.DATASETS.VALID_LIST = "/home/kc/luantt/kaggle_data/dataset-medium/valid.txt"
 
 _C.SOLVER = CN()
-_C.SOLVER.MAX_ITER = 40000
-_C.SOLVER.STOP_ITER = 40000
+_C.SOLVER.MAX_ITER = 80000
+_C.SOLVER.STOP_ITER = 80000
 
 _C.SOLVER.LR_METHOD = "poly"
 _C.SOLVER.LR = 0.005

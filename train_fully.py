@@ -1,8 +1,8 @@
+import os
 import torch
 import torch.nn as nn
 import argparse
 import random
-import os
 import time
 from datetime import datetime
 
@@ -10,6 +10,7 @@ from configs import cfg
 from datasets import *
 from models import DeeplabV3plus
 from utils import setup_logger, IoU, OverallAcc
+import segmentation_models_pytorch as smp
 
 def combine_cfg(config_dir=None):
     cfg_base = cfg.clone()
@@ -21,7 +22,7 @@ def read_file(directory):
     l = []
     with open(directory, "r") as f:
         for line in f.readlines():
-            l.append(line[:-1] + ".jpg")
+            l.append(line[:-1])
     return l
 
 def train(cfg, logger):
@@ -31,6 +32,7 @@ def train(cfg, logger):
     device = torch.device(cfg.MODEL.DEVICE)
 
     model = DeeplabV3plus(cfg.MODEL.ATROUS, cfg.MODEL.NUM_CLASSES)
+    #model = smp.Unet(encoder_name="resnet50",encoder_weights="imagenet",in_channels=3,classes=6,)
     model.to(device)
 
     max_iter = cfg.SOLVER.MAX_ITER
@@ -47,7 +49,7 @@ def train(cfg, logger):
     iteration = 0
 
     train_list = read_file(cfg.DATASETS.TRAIN_LIST)
-    valid_list = read_file(cfg.DATASETS.LABEL_LIST)
+    valid_list = read_file(cfg.DATASETS.VALID_LIST)
 
     train_data = VOCDataset(cfg.DATASETS.IMGDIR, cfg.DATASETS.LBLDIR,
                             img_list=train_list,
@@ -98,6 +100,7 @@ def train(cfg, logger):
             images = images.to(device)
             labels = labels.to(device)
 
+        
             preds = model(images)
             
             loss = criterion(preds, labels)
@@ -159,5 +162,5 @@ if __name__ == "__main__":
     #args = parser.parse_args()
     #cfg = combine_cfg(args.config)
     #print(cfg.OUTPUT_DIR)
-    logger = setup_logger("DeeplabV3 ( ResNet) ", cfg.OUTPUT_DIR, str(datetime.now()) + ".log")
+    logger = setup_logger("DeepLabV3+(ResNet) ", cfg.OUTPUT_DIR, str(datetime.now()) + ".log")
     model = train(cfg, logger)
