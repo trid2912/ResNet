@@ -1,0 +1,28 @@
+Using cache found in /home/kc/.cache/torch/hub/pytorch_vision_v0.10.0
+/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  warnings.warn(
+/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+2022-12-29 11:14:51,753 DeepLabV3+(ResNet)  INFO: Number of train images: 10270
+2022-12-29 11:14:51,753 DeepLabV3+(ResNet)  INFO: Number of validation images: 1784
+2022-12-29 11:14:51,754 DeepLabV3+(ResNet)  INFO: Start training
+Traceback (most recent call last):
+  File "/home/kc/tritd/ResNet/train_fully.py", line 176, in <module>
+    model = train(cfg, logger)
+  File "/home/kc/tritd/ResNet/train_fully.py", line 109, in train
+    preds = model(images)
+  File "/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/kc/tritd/ResNet/models/deeplabv3plus/build_model.py", line 36, in forward
+    mid_fea = self.middle2(mid_fea)
+  File "/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/kc/tritd/ResNet/models/deeplabv3plus/aspp.py", line 15, in forward
+    x = self.conv(x)
+  File "/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB (GPU 0; 23.70 GiB total capacity; 9.52 GiB already allocated; 254.31 MiB free; 9.76 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

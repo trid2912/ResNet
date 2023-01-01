@@ -5,6 +5,7 @@ import argparse
 import random
 import time
 from datetime import datetime
+import wandb
 
 from configs import cfg
 from datasets import *
@@ -28,6 +29,11 @@ def read_file(directory):
 def train(cfg, logger):
     best_iou = 0
     logger.info("Begin the training process")
+    wandb.login(key="051cf82cb4b7ccdf04b0d76bf7e1d4f4733e87f7")
+    wandb.init(project= "drone_deploy", name= "ResNet", config= {"batch_size": cfg.SOLVER.BATCH_SIZE,
+                                                 "max_iter": cfg.SOLVER.MAX_ITER,
+                                                 "model": "DeeplabV3+",
+                                                 "device": cfg.MODEL.DEVICE})
 
     device = torch.device(cfg.MODEL.DEVICE)
 
@@ -57,10 +63,9 @@ def train(cfg, logger):
                             ToTensor(), 
                             Normalization(), 
                             RandomScale(cfg.INPUT.MULTI_SCALES), 
-                            RandomCrop(cfg.INPUT.CROP_SIZE), 
                             RandomFlip(cfg.INPUT.FLIP_PROB)]))
     val_data = VOCDataset(cfg.DATASETS.IMGDIR, cfg.DATASETS.LBLDIR,img_list = valid_list, transformation=
-                         Compose([ToTensor(), Normalization(), RandomCrop(cfg.INPUT.CROP_SIZE)]))
+                         Compose([ToTensor(), Normalization()]))
 
     logger.info("Number of train images: " + str(len(train_data)))
     logger.info("Number of validation images: " + str(len(val_data)))
@@ -109,7 +114,10 @@ def train(cfg, logger):
             optimizer.step()
 
             iteration += 1
-
+            infor = {"lr":optimizer.param_groups[0]['lr'],
+                    "loss": loss,
+                    "time/iter": data_time,
+                    "iteration": iteration}
             if iteration % 20 == 0:
                 logger.info("Iter [%d/%d] Loss: %f Time/iter: %f" % (iteration, 
                 cfg.SOLVER.STOP_ITER, loss, data_time))
@@ -141,8 +149,10 @@ def train(cfg, logger):
                 results = "\n" + "Overall acc: " + str(acc) + " Mean IoU: " + str(mean_iou) + "Learning rate: " + str(optimizer.param_groups[0]['lr']) + "\n"
                 for i, iou in enumerate(ious):
                     results += "Class " + str(i) + " IoU: " + str(iou.item()) + "\n"
+                infor.update({"acc": float(str(acc)), "iou":float(str(mean_iou)) })
                 results = results[:-2]
                 logger.info(results)
+                wandb.log(infor)
                 torch.save({"model_state_dict": model.state_dict(), 
                             "iteration": iteration,
                             }, os.path.join(output_dir, "current_model.pkl"))

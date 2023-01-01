@@ -1,0 +1,4 @@
+2022-12-29 11:14:44,873 DeepLabV3+(ResNet)  INFO: Begin the training process
+2022-12-29 11:14:51,753 DeepLabV3+(ResNet)  INFO: Number of train images: 10270
+2022-12-29 11:14:51,753 DeepLabV3+(ResNet)  INFO: Number of validation images: 1784
+2022-12-29 11:14:51,754 DeepLabV3+(ResNet)  INFO: Start training

@@ -1,0 +1,168 @@
+2022-12-29 11:16:18,914 INFO    StreamThr :3470568 [internal.py:wandb_internal():87] W&B internal server running at pid: 3470568, started at: 2022-12-29 11:16:18.909921
+2022-12-29 11:16:18,922 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: status
+2022-12-29 11:16:18,922 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: status
+2022-12-29 11:16:18,936 DEBUG   SenderThread:3470568 [sender.py:send():303] send: header
+2022-12-29 11:16:18,936 INFO    WriterThread:3470568 [datastore.py:open_for_write():75] open: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/run-28royka9.wandb
+2022-12-29 11:16:18,957 DEBUG   SenderThread:3470568 [sender.py:send():303] send: run
+2022-12-29 11:16:19,628 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: check_version
+2022-12-29 11:16:19,635 INFO    SenderThread:3470568 [dir_watcher.py:__init__():216] watching files in: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files
+2022-12-29 11:16:19,636 INFO    SenderThread:3470568 [sender.py:_start_run_threads():928] run started: 28royka9 with start time 1672287378.917473
+2022-12-29 11:16:19,636 DEBUG   SenderThread:3470568 [sender.py:send():303] send: summary
+2022-12-29 11:16:19,636 INFO    SenderThread:3470568 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 11:16:19,636 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: check_version
+2022-12-29 11:16:19,927 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: run_start
+2022-12-29 11:16:19,930 DEBUG   HandlerThread:3470568 [system_info.py:__init__():31] System info init
+2022-12-29 11:16:19,930 DEBUG   HandlerThread:3470568 [system_info.py:__init__():46] System info init done
+2022-12-29 11:16:19,930 INFO    HandlerThread:3470568 [system_monitor.py:start():150] Starting system monitor
+2022-12-29 11:16:19,930 INFO    SystemMonitor:3470568 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-12-29 11:16:19,930 INFO    HandlerThread:3470568 [system_monitor.py:probe():171] Collecting system info
+2022-12-29 11:16:19,940 INFO    SystemMonitor:3470568 [interfaces.py:start():168] Started cpu
+2022-12-29 11:16:19,940 INFO    SystemMonitor:3470568 [interfaces.py:start():168] Started disk
+2022-12-29 11:16:19,940 INFO    SystemMonitor:3470568 [interfaces.py:start():168] Started gpu
+2022-12-29 11:16:19,940 INFO    SystemMonitor:3470568 [interfaces.py:start():168] Started memory
+2022-12-29 11:16:19,941 INFO    SystemMonitor:3470568 [interfaces.py:start():168] Started network
+2022-12-29 11:16:19,961 DEBUG   HandlerThread:3470568 [system_info.py:probe():195] Probing system
+2022-12-29 11:16:19,972 DEBUG   HandlerThread:3470568 [system_info.py:_probe_git():180] Probing git
+2022-12-29 11:16:19,997 DEBUG   HandlerThread:3470568 [system_info.py:_probe_git():188] Probing git done
+2022-12-29 11:16:19,997 DEBUG   HandlerThread:3470568 [system_info.py:probe():241] Probing system done
+2022-12-29 11:16:19,997 DEBUG   HandlerThread:3470568 [system_monitor.py:probe():180] {'os': 'Linux-5.15.0-52-generic-x86_64-with-glibc2.31', 'python': '3.9.15', 'heartbeatAt': '2022-12-29T04:16:19.961910', 'startedAt': '2022-12-29T04:16:18.900338', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/kc/tritd/ResNet/train_fully.py', 'codePath': 'train_fully.py', 'git': {'remote': 'https://github.com/trid4012/ResNet', 'commit': 'a1e08dd6f5248b6219226c4e22e884de846f667d'}, 'email': 'toilaluan@github.com', 'root': '/home/kc/tritd/ResNet', 'host': 'kc', 'username': 'kc', 'executable': '/home/kc/.conda/envs/tritd/bin/python', 'cpu_count': 16, 'cpu_count_logical': 32, 'cpu_freq': {'current': 3.9103125, 'min': 2200.0, 'max': 3500.0}, 'cpu_freq_per_core': [{'current': 4.12, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.154, 'min': 2200.0, 'max': 3500.0}, {'current': 4.156, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.155, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.152, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.12, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.158, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.155, 'min': 2200.0, 'max': 3500.0}, {'current': 4.155, 'min': 2200.0, 'max': 3500.0}, {'current': 4.154, 'min': 2200.0, 'max': 3500.0}, {'current': 4.155, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}, {'current': 4.157, 'min': 2200.0, 'max': 3500.0}], 'disk': {'total': 915.3232879638672, 'used': 788.9388732910156}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25438715904}], 'memory': {'total': 62.70812225341797}}
+2022-12-29 11:16:19,997 INFO    HandlerThread:3470568 [system_monitor.py:probe():181] Finished collecting system info
+2022-12-29 11:16:19,997 INFO    HandlerThread:3470568 [system_monitor.py:probe():184] Publishing system info
+2022-12-29 11:16:19,997 DEBUG   HandlerThread:3470568 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-12-29 11:16:19,998 DEBUG   HandlerThread:3470568 [system_info.py:_save_pip():67] Saving pip packages done
+2022-12-29 11:16:19,998 DEBUG   HandlerThread:3470568 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-12-29 11:16:20,638 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_created():275] file/dir created: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/wandb-summary.json
+2022-12-29 11:16:20,638 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_created():275] file/dir created: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/requirements.txt
+2022-12-29 11:16:20,638 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_created():275] file/dir created: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/conda-environment.yaml
+2022-12-29 11:16:21,915 DEBUG   HandlerThread:3470568 [system_info.py:_save_conda():86] Saving conda packages done
+2022-12-29 11:16:21,916 INFO    HandlerThread:3470568 [system_monitor.py:probe():186] Finished publishing system info
+2022-12-29 11:16:21,918 DEBUG   SenderThread:3470568 [sender.py:send():303] send: files
+2022-12-29 11:16:21,918 INFO    SenderThread:3470568 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-12-29 11:16:21,926 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 11:16:21,927 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 11:16:22,223 DEBUG   SenderThread:3470568 [sender.py:send():303] send: telemetry
+2022-12-29 11:16:22,638 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/conda-environment.yaml
+2022-12-29 11:16:22,638 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_created():275] file/dir created: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/output.log
+2022-12-29 11:16:22,638 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_created():275] file/dir created: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/wandb-metadata.json
+2022-12-29 11:16:24,638 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/output.log
+2022-12-29 11:16:24,661 INFO    Thread-16 :3470568 [upload_job.py:push():143] Uploaded file /tmp/tmpoilixe__wandb/p47vnybb-wandb-metadata.json
+2022-12-29 11:16:26,639 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/output.log
+2022-12-29 11:16:27,222 DEBUG   SenderThread:3470568 [sender.py:send():303] send: exit
+2022-12-29 11:16:27,222 INFO    SenderThread:3470568 [sender.py:send_exit():442] handling exit code: 1
+2022-12-29 11:16:27,222 INFO    SenderThread:3470568 [sender.py:send_exit():444] handling runtime: 7
+2022-12-29 11:16:27,223 INFO    SenderThread:3470568 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 11:16:27,224 INFO    SenderThread:3470568 [sender.py:send_exit():450] send defer
+2022-12-29 11:16:27,224 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:27,224 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 0
+2022-12-29 11:16:27,224 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:27,224 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-12-29 11:16:27,224 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 1
+2022-12-29 11:16:27,224 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:27,224 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 1
+2022-12-29 11:16:27,224 INFO    HandlerThread:3470568 [system_monitor.py:finish():160] Stopping system monitor
+2022-12-29 11:16:27,224 DEBUG   SystemMonitor:3470568 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-12-29 11:16:27,224 DEBUG   SystemMonitor:3470568 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-12-29 11:16:27,224 DEBUG   SystemMonitor:3470568 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-12-29 11:16:27,229 INFO    HandlerThread:3470568 [interfaces.py:finish():175] Joined cpu
+2022-12-29 11:16:27,229 INFO    HandlerThread:3470568 [interfaces.py:finish():175] Joined disk
+2022-12-29 11:16:27,433 INFO    HandlerThread:3470568 [interfaces.py:finish():175] Joined gpu
+2022-12-29 11:16:27,434 INFO    HandlerThread:3470568 [interfaces.py:finish():175] Joined memory
+2022-12-29 11:16:27,434 INFO    HandlerThread:3470568 [interfaces.py:finish():175] Joined network
+2022-12-29 11:16:27,434 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:27,434 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-12-29 11:16:27,434 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 2
+2022-12-29 11:16:27,434 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:27,434 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 2
+2022-12-29 11:16:27,434 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:27,434 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-12-29 11:16:27,434 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 3
+2022-12-29 11:16:27,434 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:27,434 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 3
+2022-12-29 11:16:27,434 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:27,434 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-12-29 11:16:27,434 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 4
+2022-12-29 11:16:27,435 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:27,435 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 4
+2022-12-29 11:16:27,435 DEBUG   SenderThread:3470568 [sender.py:send():303] send: summary
+2022-12-29 11:16:27,435 INFO    SenderThread:3470568 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 11:16:27,435 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:27,435 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-12-29 11:16:27,435 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 5
+2022-12-29 11:16:27,436 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:27,436 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 5
+2022-12-29 11:16:27,436 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:27,436 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-12-29 11:16:27,639 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/wandb-summary.json
+2022-12-29 11:16:27,758 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 6
+2022-12-29 11:16:27,759 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:27,759 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 6
+2022-12-29 11:16:27,759 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:27,759 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-12-29 11:16:28,222 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-29 11:16:28,640 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/output.log
+2022-12-29 11:16:28,640 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/config.yaml
+2022-12-29 11:16:29,895 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 7
+2022-12-29 11:16:29,895 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: poll_exit
+2022-12-29 11:16:29,895 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:29,896 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 7
+2022-12-29 11:16:29,896 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:29,896 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-12-29 11:16:29,896 INFO    SenderThread:3470568 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-12-29 11:16:30,640 INFO    Thread-13 :3470568 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/output.log
+2022-12-29 11:16:30,641 INFO    SenderThread:3470568 [dir_watcher.py:finish():392] scan: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files
+2022-12-29 11:16:30,641 INFO    SenderThread:3470568 [dir_watcher.py:finish():406] scan save: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/wandb-metadata.json wandb-metadata.json
+2022-12-29 11:16:30,641 INFO    SenderThread:3470568 [dir_watcher.py:finish():406] scan save: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/config.yaml config.yaml
+2022-12-29 11:16:30,641 INFO    SenderThread:3470568 [dir_watcher.py:finish():406] scan save: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/conda-environment.yaml conda-environment.yaml
+2022-12-29 11:16:30,641 INFO    SenderThread:3470568 [dir_watcher.py:finish():406] scan save: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/requirements.txt requirements.txt
+2022-12-29 11:16:30,641 INFO    SenderThread:3470568 [dir_watcher.py:finish():406] scan save: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/output.log output.log
+2022-12-29 11:16:30,658 INFO    SenderThread:3470568 [dir_watcher.py:finish():406] scan save: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/wandb-summary.json wandb-summary.json
+2022-12-29 11:16:30,660 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 8
+2022-12-29 11:16:30,668 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:30,668 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 8
+2022-12-29 11:16:30,668 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:30,668 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-12-29 11:16:30,668 INFO    SenderThread:3470568 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-29 11:16:31,438 INFO    Thread-17 :3470568 [upload_job.py:push():143] Uploaded file /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/config.yaml
+2022-12-29 11:16:31,440 INFO    Thread-19 :3470568 [upload_job.py:push():143] Uploaded file /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/requirements.txt
+2022-12-29 11:16:31,442 INFO    Thread-20 :3470568 [upload_job.py:push():143] Uploaded file /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/output.log
+2022-12-29 11:16:31,529 INFO    Thread-21 :3470568 [upload_job.py:push():143] Uploaded file /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/wandb-summary.json
+2022-12-29 11:16:31,705 INFO    Thread-18 :3470568 [upload_job.py:push():143] Uploaded file /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/files/conda-environment.yaml
+2022-12-29 11:16:31,906 INFO    Thread-12 :3470568 [sender.py:transition_state():463] send defer: 9
+2022-12-29 11:16:31,906 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:31,906 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 9
+2022-12-29 11:16:31,906 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:31,906 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-12-29 11:16:31,906 INFO    SenderThread:3470568 [file_pusher.py:join():173] waiting for file pusher
+2022-12-29 11:16:31,906 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 10
+2022-12-29 11:16:31,907 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:31,907 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 10
+2022-12-29 11:16:31,907 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:31,907 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-12-29 11:16:32,135 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 11
+2022-12-29 11:16:32,135 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:32,135 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 11
+2022-12-29 11:16:32,135 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:32,135 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-12-29 11:16:32,135 INFO    SenderThread:3470568 [sender.py:transition_state():463] send defer: 12
+2022-12-29 11:16:32,136 DEBUG   SenderThread:3470568 [sender.py:send():303] send: final
+2022-12-29 11:16:32,136 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 11:16:32,136 DEBUG   SenderThread:3470568 [sender.py:send():303] send: footer
+2022-12-29 11:16:32,136 INFO    HandlerThread:3470568 [handler.py:handle_request_defer():162] handle defer: 12
+2022-12-29 11:16:32,136 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: defer
+2022-12-29 11:16:32,136 INFO    SenderThread:3470568 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-12-29 11:16:32,137 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-29 11:16:32,137 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: poll_exit
+2022-12-29 11:16:32,137 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: server_info
+2022-12-29 11:16:32,138 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: get_summary
+2022-12-29 11:16:32,138 DEBUG   SenderThread:3470568 [sender.py:send_request():317] send_request: server_info
+2022-12-29 11:16:32,138 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: sampled_history
+2022-12-29 11:16:32,736 INFO    MainThread:3470568 [wandb_run.py:_footer_history_summary_info():3408] rendering history
+2022-12-29 11:16:32,736 INFO    MainThread:3470568 [wandb_run.py:_footer_history_summary_info():3440] rendering summary
+2022-12-29 11:16:32,737 INFO    MainThread:3470568 [wandb_run.py:_footer_sync_info():3364] logging synced files
+2022-12-29 11:16:32,737 DEBUG   HandlerThread:3470568 [handler.py:handle_request():139] handle_request: shutdown
+2022-12-29 11:16:32,737 INFO    HandlerThread:3470568 [handler.py:finish():814] shutting down handler
+2022-12-29 11:16:33,136 INFO    WriterThread:3470568 [datastore.py:close():279] close: /home/kc/tritd/ResNet/wandb/run-20221229_111618-28royka9/run-28royka9.wandb
+2022-12-29 11:16:33,736 INFO    SenderThread:3470568 [sender.py:finish():1331] shutting down sender
+2022-12-29 11:16:33,736 INFO    SenderThread:3470568 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-29 11:16:33,736 INFO    SenderThread:3470568 [file_pusher.py:join():173] waiting for file pusher
+2022-12-29 11:16:33,739 INFO    MainThread:3470568 [internal.py:handle_exit():77] Internal process exited

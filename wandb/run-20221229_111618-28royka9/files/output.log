@@ -1,0 +1,18 @@
+Using cache found in /home/kc/.cache/torch/hub/pytorch_vision_v0.10.0
+/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  warnings.warn(
+/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+2022-12-29 11:16:23,882 DeepLabV3+(ResNet)  INFO: Number of train images: 10270
+2022-12-29 11:16:23,883 DeepLabV3+(ResNet)  INFO: Number of validation images: 1784
+2022-12-29 11:16:23,884 DeepLabV3+(ResNet)  INFO: Start training
+Traceback (most recent call last):
+  File "/home/kc/tritd/ResNet/train_fully.py", line 176, in <module>
+    model = train(cfg, logger)
+  File "/home/kc/tritd/ResNet/train_fully.py", line 112, in train
+    loss.backward()
+  File "/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/home/kc/.conda/envs/tritd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB (GPU 1; 23.69 GiB total capacity; 13.96 GiB already allocated; 920.94 MiB free; 14.52 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
