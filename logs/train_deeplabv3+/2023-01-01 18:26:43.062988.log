@@ -1,0 +1,4 @@
+2023-01-01 18:26:43,063 UNet  INFO: Begin the training process
+2023-01-01 18:26:50,042 UNet  INFO: Number of train images: 10270
+2023-01-01 18:26:50,043 UNet  INFO: Number of validation images: 1784
+2023-01-01 18:26:50,043 UNet  INFO: Start training

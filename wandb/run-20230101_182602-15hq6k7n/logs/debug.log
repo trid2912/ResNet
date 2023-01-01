@@ -1,0 +1,27 @@
+2023-01-01 18:26:02,803 INFO    MainThread:3549701 [wandb_setup.py:_flush():68] Configure stats pid to 3549701
+2023-01-01 18:26:02,803 INFO    MainThread:3549701 [wandb_setup.py:_flush():68] Loading settings from /home/kc/.config/wandb/settings
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_setup.py:_flush():68] Loading settings from /home/kc/tritd/ResNet/wandb/settings
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train_fully.py', 'program': '/home/kc/tritd/ResNet/train_fully.py'}
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_setup.py:_flush():68] Applying login settings: {'api_key': '***REDACTED***'}
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_setup.py:_flush():68] Applying login settings: {'api_key': '***REDACTED***'}
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_init.py:_log_setup():476] Logging user logs to /home/kc/tritd/ResNet/wandb/run-20230101_182602-15hq6k7n/logs/debug.log
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_init.py:_log_setup():477] Logging internal logs to /home/kc/tritd/ResNet/wandb/run-20230101_182602-15hq6k7n/logs/debug-internal.log
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_init.py:init():516] calling init triggers
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'batch_size': 16, 'max_iter': 80000, 'model': 'UNet', 'device': 'cuda:1'}
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_init.py:init():569] starting backend
+2023-01-01 18:26:02,804 INFO    MainThread:3549701 [wandb_init.py:init():573] setting up manager
+2023-01-01 18:26:02,805 INFO    MainThread:3549701 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-01-01 18:26:02,806 INFO    MainThread:3549701 [wandb_init.py:init():580] backend started and connected
+2023-01-01 18:26:02,808 INFO    MainThread:3549701 [wandb_init.py:init():658] updated telemetry
+2023-01-01 18:26:02,831 INFO    MainThread:3549701 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2023-01-01 18:26:03,480 INFO    MainThread:3549701 [wandb_run.py:_on_init():2006] communicating current version
+2023-01-01 18:26:03,772 INFO    MainThread:3549701 [wandb_run.py:_on_init():2010] got version response 
+2023-01-01 18:26:03,772 INFO    MainThread:3549701 [wandb_init.py:init():728] starting run threads in backend
+2023-01-01 18:26:05,618 INFO    MainThread:3549701 [wandb_run.py:_console_start():1986] atexit reg
+2023-01-01 18:26:05,618 INFO    MainThread:3549701 [wandb_run.py:_redirect():1844] redirect: SettingsConsole.WRAP_RAW
+2023-01-01 18:26:05,618 INFO    MainThread:3549701 [wandb_run.py:_redirect():1909] Wrapping output streams.
+2023-01-01 18:26:05,618 INFO    MainThread:3549701 [wandb_run.py:_redirect():1931] Redirects installed.
+2023-01-01 18:26:05,619 INFO    MainThread:3549701 [wandb_init.py:init():765] run started, returning control to user process
+2023-01-01 18:26:13,410 WARNING MsgRouterThr:3549701 [router.py:message_loop():77] message_loop has been closed

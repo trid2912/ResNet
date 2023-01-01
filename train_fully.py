@@ -32,13 +32,13 @@ def train(cfg, logger):
     wandb.login(key="051cf82cb4b7ccdf04b0d76bf7e1d4f4733e87f7")
     wandb.init(project= "drone_deploy", name= "ResNet", config= {"batch_size": cfg.SOLVER.BATCH_SIZE,
                                                  "max_iter": cfg.SOLVER.MAX_ITER,
-                                                 "model": "DeeplabV3+",
+                                                 "model": "UNet",
                                                  "device": cfg.MODEL.DEVICE})
 
     device = torch.device(cfg.MODEL.DEVICE)
 
-    model = DeeplabV3plus(cfg.MODEL.ATROUS, cfg.MODEL.NUM_CLASSES)
-    #model = smp.Unet(encoder_name="resnet50",encoder_weights="imagenet",in_channels=3,classes=6,)
+    #model = DeeplabV3plus(cfg.MODEL.ATROUS, cfg.MODEL.NUM_CLASSES)
+    model = smp.Unet(encoder_name="resnet50",encoder_weights="imagenet",in_channels=3,classes=6,)
     model.to(device)
 
     max_iter = cfg.SOLVER.MAX_ITER
@@ -63,9 +63,10 @@ def train(cfg, logger):
                             ToTensor(), 
                             Normalization(), 
                             RandomScale(cfg.INPUT.MULTI_SCALES), 
+                            RandomCrop(cfg.INPUT.CROP_SIZE), 
                             RandomFlip(cfg.INPUT.FLIP_PROB)]))
     val_data = VOCDataset(cfg.DATASETS.IMGDIR, cfg.DATASETS.LBLDIR,img_list = valid_list, transformation=
-                         Compose([ToTensor(), Normalization()]))
+                         Compose([ToTensor(), Normalization(), RandomCrop(cfg.INPUT.CROP_SIZE)]))
 
     logger.info("Number of train images: " + str(len(train_data)))
     logger.info("Number of validation images: " + str(len(val_data)))
@@ -172,5 +173,5 @@ if __name__ == "__main__":
     #args = parser.parse_args()
     #cfg = combine_cfg(args.config)
     #print(cfg.OUTPUT_DIR)
-    logger = setup_logger("DeepLabV3+(ResNet) ", cfg.OUTPUT_DIR, str(datetime.now()) + ".log")
+    logger = setup_logger("UNet ", cfg.OUTPUT_DIR, str(datetime.now()) + ".log")
     model = train(cfg, logger)

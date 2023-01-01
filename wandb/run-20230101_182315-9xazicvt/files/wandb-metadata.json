@@ -1,0 +1,209 @@
+{
+    "os": "Linux-5.15.0-52-generic-x86_64-with-glibc2.31",
+    "python": "3.9.15",
+    "heartbeatAt": "2023-01-01T11:23:16.306993",
+    "startedAt": "2023-01-01T11:23:15.178062",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/kc/tritd/ResNet/train_fully.py",
+    "codePath": "train_fully.py",
+    "git": {
+        "remote": "https://github.com/trid4012/ResNet",
+        "commit": "5deda98277b26c706fcfff572c75657da78e784a"
+    },
+    "email": "toilaluan@github.com",
+    "root": "/home/kc/tritd/ResNet",
+    "host": "kc",
+    "username": "kc",
+    "executable": "/home/kc/.conda/envs/tritd/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 3.425593750000001,
+        "min": 2200.0,
+        "max": 3500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.156,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.155,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.159,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.051,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.068,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.159,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.16,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.16,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.045,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.161,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.161,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.161,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.156,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.033,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.155,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.159,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3.5,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3.5,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.058,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.8,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.8,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 4.162,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3.5,
+            "min": 2200.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "total": 915.3232879638672,
+        "used": 789.8440093994141
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25447170048
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25438715904
+        }
+    ],
+    "memory": {
+        "total": 62.70812225341797
+    }
+}
